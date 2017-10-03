@@ -3,7 +3,7 @@
 Implementation of the STREAK algorithm for streaming maximization of weakly submodular functions.
 
 - Ethan R. Elenberg, Alexandros G. Dimakis, Moran Feldman, and Amin Karbasi. ‘‘Streaming Weak Submodularity: Interpreting Neural Networks on the Fly’’, to appear in *Proc. Neural Information Processing Systems (NIPS)*, 2017. 
-[arXiv (preprint)](http://arxiv.org/abs/1703.02647)
+[arXiv (preprint)](https://arxiv.org/abs/1703.02647)
 
 ### Requirements
 
