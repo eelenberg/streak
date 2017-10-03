@@ -23,7 +23,7 @@ Implementation of the STREAK algorithm for streaming maximization of weakly subm
 
 ### Usage
 
- The main scripts are [streakRegressionExample.py](./blob/master/streakRegressionExample.py) and [streakInterpretationExample.py](./blob/master/streakInterpretationExample.py). The Jupyter notebook [StreakImageRetraining.ipynb](./blob/master/StreakImageRetraining.ipynb) is also available as a convenient walkthrough of streakIntrepretationExample. [tf_predict.py](./blob/master/tf_predict.py) can also be used from the command line to load the tensorflow model and predict labels for a list of images.
+ The main scripts are [streakRegressionExample.py](./streakRegressionExample.py) and [streakInterpretationExample.py](./streakInterpretationExample.py). The Jupyter notebook [StreakImageRetraining.ipynb](./StreakImageRetraining.ipynb) is also available as a convenient walkthrough of streakIntrepretationExample. [tf_predict.py](./tf_predict.py) can also be used from the command line to load the tensorflow model and predict labels for a list of images.
 
 ```sh
 python streakRegressionExample.py
