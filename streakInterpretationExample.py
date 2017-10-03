@@ -133,6 +133,7 @@ if __name__ == '__main__':
     else: #tensorflow transfer learning
         g = load_networks.load_tf_transfer()
         #kernel size should be 3-6, smaller means larger number of segments
+        #todo: compare streaming_greedy, highest_weights, and forward_selection with larger K
         # K,kernel_size,num_samples,predict,writeFlag,logFlag = 30,3,1000,lambda x: tf_predict(x,0,5,g),1,1 
         K,kernel_size,num_samples,predict,writeFlag,logFlag = 5,6,1000,lambda x: tf_predict(x,0,5,g),1,1 
         # K,kernel_size,num_samples,predict,writeFlag,logFlag = 1,8,5,lambda x: tf_predict(x,0,5,g),0,0  #devel

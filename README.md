@@ -7,17 +7,17 @@ Implementation of the STREAK algorithm for streaming maximization of weakly subm
 
 ### Requirements
 
-- Directory ‘retrained' that contains the black box models
+- Directory 'retrained' that contains the black box models
 	
 	-- bottleneck\_fc\_model.h5 (keras)
 
 	-- classify\_image\_graph\_def.pb and output\_labels.txt (tensorflow)
 	 
-- Directory ‘sunflowers’ that contains jpeg images from class sunflowers to use as queries
+- Directory 'sunflowers' that contains jpeg images from class sunflowers to use as queries
 
-- Directory ‘daisy' that contains jpeg images from class daisy to use as queries
+- Directory 'daisy' that contains jpeg images from class daisy to use as queries
 
-- Directory ‘outputs’ to save the output images
+- Directory 'outputs' to save the output images
 
 - LIME, TensorFlow and/or Keras, NumPy, and scikit-image packages
 
@@ -30,3 +30,8 @@ python streakRegressionExample.py
 python streakInterpretationExample.py image1.jpg image2.jpg
 python tf_predict.py image1.jpg image2.jpg
 ```
+A modified LimeImageExplainer class supports 2 new feature selection methods:
+
+- 'greedy_likelihood' (Streak Likelihood) is the method described in Section 6.2 of the paper. It does not require generating a set of perturbed images, which leads to faster running times for moderate number of image segments.
+
+- 'streaming\_greedy' (Streak LIME) is the method described in Section A.8 of the paper. It generates perturbed images but then uses Streak as the feature selection method instead of forward selection, highest weights, lasso, etc. Like LIME, it scales with the number of perturbed images. Running time is consistently shorter than 'forward\_selection' and longer than 'highest\_weights'.
