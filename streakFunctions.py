@@ -12,7 +12,6 @@ import argparse
 from itertools import combinations,product,chain,combinations_with_replacement
 from functools import reduce
 import random
-from imageQuery import *
 
 '''
 #functions to implement STREAK for regression and interpretability experiments

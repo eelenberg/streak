@@ -32,6 +32,6 @@ python tf_predict.py image1.jpg image2.jpg
 ```
 A modified LimeImageExplainer class supports 2 new feature selection methods:
 
-- 'greedy_likelihood' (Streak Likelihood) is the method described in Section 6.2 of the paper. It does not require generating a set of perturbed images, which leads to faster running times for moderate number of image segments.
+- 'greedy_likelihood' (STREAK Likelihood) is the method described in Section 6.2 of the paper. It does not require generating a set of perturbed images, which leads to faster running times for moderate number of image segments.
 
-- 'streaming\_greedy' (Streak LIME) is the method described in Section A.8 of the paper. It generates perturbed images but then uses Streak as the feature selection method instead of forward selection, highest weights, lasso, etc. Like LIME, it scales with the number of perturbed images. Running time is consistently shorter than 'forward\_selection' and longer than 'highest\_weights'.
+- 'streaming\_greedy' (STREAK LIME) is the method described in Section A.8 of the paper. It generates perturbed images but then uses STREAK as the feature selection method instead of forward selection, highest weights, lasso, etc. Like LIME, it scales with the number of perturbed images. Running time is consistently shorter than 'forward\_selection' and longer than 'highest\_weights'.
