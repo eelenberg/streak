@@ -52,7 +52,7 @@ def streakInterpretationExample(testImageName,model_classifier_fn,label_idx=None
     
     testImage = transform_img_fn([testImageName])[0]
     #new explainer class that can support streak feature_selection types
-    explainer = lime_image_streak.LimeImageExplainer(feature_selection=fs) 
+    explainer = lime_image_streak.LimeImageExplainer(feature_selection=feature_selection)
     texplain_start = time()
     if label_idx is None:
         num_top_labels = 1
@@ -98,7 +98,7 @@ def streakInterpretationExample(testImageName,model_classifier_fn,label_idx=None
             fptr.close()
         #write output to log
         with open(resultsFilename,'a') as lptr:
-            lptr.write('\t'.join([testImageName,str(label_idx),str(K),str(kernel_size),fs,str(num_samples),
+            lptr.write('\t'.join([testImageName,str(label_idx),str(K),str(kernel_size),feature_selection,str(num_samples),
                 outputName,str(numSelected),str(t),str(explanation.num_evals)]) + '\n') 
 
     return t,explanation.score,tempImage,testImage,numSelected,explanation.num_evals

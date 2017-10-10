@@ -19,7 +19,7 @@ Implementation of the STREAK algorithm for streaming maximization of weakly subm
 
 - Directory 'outputs' to save the output images
 
-- LIME, TensorFlow and/or Keras, NumPy, and scikit-image packages
+- LIME, TensorFlow and/or Keras, NumPy, scikit-image, and joblib packages
 
 ### Usage
 
