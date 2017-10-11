@@ -1,6 +1,6 @@
 # STREAK Example Code
 
-Implementation of the STREAK algorithm for streaming maximization of weakly submodular functions.
+Interpreting neural networks via the STREAK algorithm (streaming weak submodular maximization).
 
 - Ethan R. Elenberg, Alexandros G. Dimakis, Moran Feldman, and Amin Karbasi. ‘‘Streaming Weak Submodularity: Interpreting Neural Networks on the Fly’’, to appear in *Proc. Neural Information Processing Systems (NIPS)*, 2017. 
 [arXiv (preprint)](https://arxiv.org/abs/1703.02647)
@@ -23,11 +23,11 @@ Implementation of the STREAK algorithm for streaming maximization of weakly subm
 
 ### Usage
 
- The main scripts are [streakRegressionExample.py](./streakRegressionExample.py) and [streakInterpretationExample.py](./streakInterpretationExample.py). The Jupyter notebook [StreakImageRetraining.ipynb](./StreakImageRetraining.ipynb) is also available as a convenient walkthrough of streakIntrepretationExample. [tf_predict.py](./tf_predict.py) can also be used from the command line to load the tensorflow model and predict labels for a list of images.
+ The main scripts are [streakInterpretationExample.py](./streakInterpretationExample.py) and [streakRegressionExample.py](./streakRegressionExample.py). The Jupyter notebook [StreakImageRetraining.ipynb](./StreakImageRetraining.ipynb) is also available as a convenient walkthrough of streakIntrepretationExample. [tf_predict.py](./tf_predict.py) can also be used from the command line to load the tensorflow model and predict labels for a list of images.
 
 ```sh
-python streakRegressionExample.py
 python streakInterpretationExample.py image1.jpg image2.jpg
+python streakRegressionExample.py
 python tf_predict.py image1.jpg image2.jpg
 ```
 A modified LimeImageExplainer class supports 2 new feature selection methods:
