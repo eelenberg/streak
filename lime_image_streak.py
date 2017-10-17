@@ -252,7 +252,8 @@ class LimeImageExplainer(object):
         from skimage.segmentation import quickshift
         segments = quickshift(image, kernel_size=qs_kernel_size,
                               max_dist=200, ratio=0.2)
-        # print "Number of (quickshift) segments: %d" % np.unique(segments).shape[0]
+        if self.base.verbose:
+            print "Number of (quickshift) segments: %d" % np.unique(segments).shape[0]
         fudged_image = image.copy()
         if hide_color is None:
             for x in np.unique(segments):
@@ -267,7 +268,8 @@ class LimeImageExplainer(object):
         
         if self.feature_selection in ['greedy_likelihood','streak_likelihood']:
             #Method described in Section 6.2 of the paper
-            # print "Greedy Sparse Likelihood (no perturbed images)"
+            if self.base.verbose:
+                print "Greedy Sparse Likelihood (no perturbed images)"
             
             _, imageLabel = self.data_labels(image, fudged_image, segments,
                                             classifier_fn, num_samples=1,
