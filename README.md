@@ -5,6 +5,14 @@ Interpreting neural networks via the STREAK algorithm (streaming weak submodular
 - Ethan R. Elenberg, Alexandros G. Dimakis, Moran Feldman, and Amin Karbasi. ‘‘Streaming Weak Submodularity: Interpreting Neural Networks on the Fly’’, to appear in *Proc. Neural Information Processing Systems (NIPS)*, 2017. 
 [arXiv (preprint)](https://arxiv.org/abs/1703.02647)
 
+### Example
+
+| ![(original)](./examples/3445110406_0c1616d2e3_n.jpg "Original Image") | ![(segmented)](./examples/3445110406_0c1616d2e3_n_segmented.jpg "Segmented Image") | ![(interpretation)](./examples/3445110406_0c1616d2e3_n_lk.jpg "Explanation")|
+|:---:|:---:|:---:|
+| Original Image (top label: daisy) | Segmented Image | Interpretation for daisy|
+
+Given a black-box neural network and a test image, the algorithm finds a sparse explaination for the network's prediction. First, segment the image into regions. Then rerun the network with most of the image regions replaced by a gray reference image, and record the output. The algorithm returns a sparse set of regions that collectively still activate the network's top label. This example uses InceptionV3 with the last layer retrained to classify different types of flowers.
+
 ### Requirements
 
 - Directory 'retrained' that contains the black box models
